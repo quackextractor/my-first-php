@@ -29,7 +29,5 @@ final class Version20260114075617 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->addSql('DROP TABLE meme_category');
         $this->addSql('DROP TABLE meme_product');
-        $this->addSql('DROP TABLE pobocka');
-        $this->addSql('DROP TABLE zamestnanec');
     }
 }
