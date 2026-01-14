@@ -13,6 +13,7 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Description</th>
+                <th>Keywords</th>
                 <th>Active</th>
                 <th>Created At</th>
             </tr>
@@ -23,6 +24,7 @@
                 <td>{{ category.id }}</td>
                 <td>{{ category.name }}</td>
                 <td>{{ category.description }}</td>
+                <td>{{ category.metaKeywords|join(', ') }}</td>
                 <td>{{ category.isActive ? 'Yes' : 'No' }}</td>
                 <td>{{ category.createdAt ? category.createdAt|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
