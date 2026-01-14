@@ -16,3 +16,11 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+meme_category:
+    resource: App\Controller\MemeCategoryController
+    type: attribute
+
+meme_product:
+    resource: App\Controller\MemeProductController
+    type: attribute
