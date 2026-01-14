@@ -77,4 +77,19 @@ class Pobocka
 
         return $this;
     }
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $jmeno_vedouciho = null;
+
+    public function getJmenoVedouciho(): ?string
+    {
+        return $this->jmeno_vedouciho;
+    }
+
+    public function setJmenoVedouciho(?string $jmeno_vedouciho): static
+    {
+        $this->jmeno_vedouciho = $jmeno_vedouciho;
+
+        return $this;
+    }
 }
