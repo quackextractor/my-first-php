@@ -28,7 +28,7 @@ class MemeProductType extends AbstractType
                     'required' => false,
                 ])
             ->add('categoryId', IntegerType::class, [
-                    'label' => 'Category ID (Manual)',
+                    'label' => 'Category ID',
                 ])
             ->add('save', SubmitType::class, ['label' => 'Create Product'])
         ;

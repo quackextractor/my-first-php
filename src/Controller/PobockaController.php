@@ -22,10 +22,7 @@ class PobockaController extends AbstractController
         $pobocka->setKodZeme('CZ');
         $pobocka->setJmenoVedouciho('Karel Vomáčka');
 
-        // tell Doctrine you want to (eventually) save the Pobocka (no queries yet)
         $entityManager->persist($pobocka);
-
-        // actually executes the queries (i.e. the INSERT query)
         $entityManager->flush();
 
         return new Response('Saved new pobocka with id ' . $pobocka->getIdPobocka());
