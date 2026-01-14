@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Meme Product{% endblock %}
+
+{% block body %}
+    <h1>Create new Meme Product</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+    {{ form_end(form) }}
+
+    <a href="{{ path('app_meme_product_index') }}">back to list</a>
+{% endblock %}

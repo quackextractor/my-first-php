@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\DBAL\Types\Types;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity]
 class MemeProduct
@@ -14,9 +15,13 @@ class MemeProduct
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank]
+    #[Assert\Length(min: 3)]
     private ?string $title = null;
 
     #[ORM\Column]
+    #[Assert\NotBlank]
+    #[Assert\Positive]
     private ?float $price = null;
 
     #[ORM\Column(nullable: true)]

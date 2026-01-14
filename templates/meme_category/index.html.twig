@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Meme Categories{% endblock %}
+
+{% block body %}
+    <h1>Meme Categories</h1>
+
+    <a href="{{ path('app_meme_category_new') }}">Create New Category</a>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Active</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for category in categories %}
+            <tr>
+                <td>{{ category.id }}</td>
+                <td>{{ category.name }}</td>
+                <td>{{ category.description }}</td>
+                <td>{{ category.isActive ? 'Yes' : 'No' }}</td>
+                <td>{{ category.createdAt ? category.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
