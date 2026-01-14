@@ -1,4 +1,3 @@
-
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
@@ -8,5 +7,33 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
-.env
-/.idea
+
+###> symfony/phpunit-bridge ###
+.phpunit.result.cache
+/phpunit.xml
+###< symfony/phpunit-bridge ###
+
+###> IDEs ###
+/.idea/
+/.vscode/
+*.swp
+*.swo
+.settings/
+.project
+.classpath
+.factorypath
+###< IDEs ###
+
+###> OS ###
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+###< OS ###
+
+###> Node ###
+/node_modules/
+/npm-debug.log
+/yarn-error.log
+###< Node ###
